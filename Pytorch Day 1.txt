@@ -1,0 +1,35 @@
+PyTorch Basics
+-Tensor requires  all their elements to have a single data type
+-Tensor require data to be in regular shape.
+-We can combine tensor with arithmetic operators. Benefit of using pytorch
+-We can automatically compute derivative
+-MAtrix must have 2-Dimension but tensor can be vector, number, 3d array or matrix
+**Difference between torch and tensor
+----Torch is a libary of pytorch
+----Tensor is mathrmatical object
+
+**---------------------------------***------------------
+Linear regression
+- @ operator represents matrix multiplication
+- w.t = weights.transpose
+- To improve the model we use gradient
+- Whenever we are done with gradient calculation and ready to move forward we set gradient back to zero by using grad.zero_(), This does not affect weight values. Just the gradient goes away.
+- Optimization algorithm: Forms basics of all trainning deep learning algorithm
+	- 5 STEPS using gradient desennt algo
+	- 1) Generate predictions: take input matrix;put it into model which multiplies input matrix with weight matrix; weights randomly initialized and adds the baises(randomly initialized) and gives some prediction from model.
+	- 2) Calculate loss: wrt targets. take prediction adn targets and put it into MSE function.
+			MSE function takes 1) difference
+					   2) Squares each element
+					   3) Gets element wise average
+	- 3)Compute gradient of loss wrt weights and biases
+ 	- 4) Adjust weights by subtracting small quantity proportional to the gradient (KEY STEP)
+		- put inside torch.no_grad(): 
+		- We multiply the gradients with a really small number (10^-5(Learning rate) in this case), to ensure that we don't modify the weights by a really large amount, since we only want to take a small step in the downhill direction of the gradient. This number is called the learning rate of the algorithm.	
+		- after done set gradients back to zero
+	- 5) Calculate loss
+* Use linear regression for simple cases. But for complex model use Deep Neural Network
+-----------------------------------------------------------------------------------------------------------
+
+LINEAR REGRESSION USING PyTorch BuiltIns
+--Linear Regression model is the simplest NN
+--------------------------------------------------------------------------
