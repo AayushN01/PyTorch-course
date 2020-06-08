@@ -1,0 +1,26 @@
+shape mismatch- define model yourself; look at tensorshape and make sure they are matching 
+NaN/ high loss- when learning rate too high.
+-----------------------------------------------------------------------------------------------
+
+FEED FORWARD NEURAL NETWORK & GPUs
+--------------------------------------------------------
+________________________________________________________
+
+- shuffle = true ; every epoch ma before creating batches, it randomly shuffles data. Every time model train garda model le different batches of data dekhcha. Model lai generalized garcha
+- do not use validation = true in validation model because we are not using validation to train.
+- num_workers = 4==>
+- pin_memory = True==>
+- hidden layer makes more powerful network
+- increasing hidden layer adds accuracy
+--------------------------------------------------------
+torch.nn v/ torch.nn.functional as F
+- simply contains different types of layers
+- F contains functions like loss, activation functions
+---------------------------------------------------------
+GPU - CPU is general purpose, not optimized to large matrix multiplication
+    - GPU takes large matrices, split, perform computatiuon and combine result.
+    - Faster than CPU
+- iter method should return an iterator
+- why move in batches? because all data does not fit in GPU
+--------------------------------------------------------------
+	
