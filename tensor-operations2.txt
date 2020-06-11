@@ -1,0 +1,21 @@
+1) torch.linspace() - returns 1d tensor with points between a starting and ending parameter.
+		    - Number of points depends on your step parameter.
+	torch.linspace(start, end, steps, out, dtype, layout, device, requires_grad)
+	*start-> starting value for the set points
+	*end -> ending value for the set points
+	*steps -> number of points to sample between start and end.
+	*out(optional) -> output tensor
+	*dtype(optional) -> desired datatype
+  	*layout(optional) -> desired layout
+2) torch.log() - returns natural log of each vakue from corresponding value
+	       - torch.log function requires the input to be a tensor object type.
+3) torch.mean() - returns mean or average of tensor
+		- can compute mean of floating types only
+4) torch.reshape() - reshapes your tensor into another shape, if applicable.
+		   - specified shape would need to fit the number elements in your tensor.
+		   - invalid if size is not equal.eg if t1 is a 3*4 matrix and we want to resize at 4*4 matrix it shows error due to uneven shape.
+5) torch.t() - transposes the tensor based on the dimension of that tensor.
+	     - if (n,m) tensor then transpose(m,n)
+6) as_stride() - displays tensor in different shape and with values based on specified parameters.
+   	       - 3 parameters; tensor, shape adn difference in position
+ 		
