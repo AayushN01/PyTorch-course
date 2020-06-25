@@ -1,0 +1,25 @@
+1) Import Libraries
+2) Prepare dataset * define hyperparameters(batch size, learning rate)
+		   - these hperparameters control how fast our model will run through trainning cases
+		   - batch size indicates how many modelwill load at a time
+		   - Learning rate indicates how model will adjust its parameters after trainning phase.
+		   * define input size and number of classes
+		   - input size is amount of data needed to represent single image.(Eg. 784 is i/p size as image is greyscale 28x28 pixel image(one value for each corresponding x and y coordinates)
+		   - classes indicate how many categories are there.(eg. columns)
+		   * Load trainning and testing dataset
+3) Explore data - Separate the  pixel value and label from each other in order to load and access it separately.
+		- construct a function to split the trainning and testing dataset to separete the labels from pixel values.
+		- reshape the array(tensor) as initial shape is row array
+		- convert trainning and testing input arrays to continuous float values as it allows for a more precise learning as compared to discrete value.
+		- trainning and testing labels are converted to long integers since the output of the model are indeces to be used in accessing probability values.
+4) Load Data - Split the trainning data set into trainning and validation set.(15-20% of trainning data)
+	     - After splitting, load data in batches with size defined earlier.
+	     - shuffle thr data loaded for trainning dataset  since there as chance that the elements in batch are homogenous(ie all are from one category) which might lead to inaccurate model.
+	     - validation set are used to determine the accuracy of model, shuffle is optional
+5) COnstruct Model - Use PyTorch builtin's.(or from scratch)
+6) Trainning the model - Initially the model would have a low accuracy due to randomized values.
+		       - If we are dealing with probability distribution,  we'll take the index of highest value to  be prediction of the model.
+		       - Define accuracy of the model by dividing the amount of times the model correctly predicts the image by total number of images.
+		       - The accuracy function would not be able to help us in determining how well the model is improving since it only looks at the output. As such, we will use Stochastic Gradient Descent to determine how well the model is improving
+		       - Evaluate the modelfor many epochs wit learning rate
+7) Finally use model to predict.
