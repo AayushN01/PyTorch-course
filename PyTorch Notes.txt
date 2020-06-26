@@ -1,0 +1,6 @@
+-torchvision is a collection of data that works with vision.
+- batchsize => how many at a time we want to pass to our model.
+- torch.nn more like OOP (initialize) 
+- torch.nn.functional is more like functions (pass parameters)
+- both are interchangable
+- 
