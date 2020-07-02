@@ -3,4 +3,7 @@
 - torch.nn more like OOP (initialize) 
 - torch.nn.functional is more like functions (pass parameters)
 - both are interchangable
-- 
+-  
+******************************CNN******************************
+!1)Image size = 250,250
+2) activation function = Rectified linear (Relu)
