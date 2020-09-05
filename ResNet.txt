@@ -1,0 +1,17 @@
+* Residual Netowrk
+* The idea of model is that when training a deep learning model,
+  the accuracy should always go down as we increase the depth of the network.
+* ResNet architecture uses blocks multiple times in ResNet layers.
+* So the idea is to first start to create block and bulid ResNet architecture.
+** i/p -> convolution -> pooling -> Two Conv. Blocks
+   In the o/p of second Conv. block we add the i/p of first conv block.ie.(adding the residue0
+   i/p added directly to the o/p of network.
+* It adds a regularizing effect to network thus does not decrease efficiency.
+*ReLU(o/p + i/p) ; i/p = Image tensor(data) for first network or previous network o/p = 32*32*3 or 500*500*3
+o/p = w2*A1 ; A1= w2(w1*i/p) ; fcl terminology.
+	ReLu(w2(w1*i/p) + i/p)
+**if w1, w2 very close to 0 but not equal 0, it will have very less infuluence.(over fitting)
+
+ 
+	    
+  

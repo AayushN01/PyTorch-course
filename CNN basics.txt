@@ -1,0 +1,21 @@
+for 3 channel image of size 32*32
+
+i/p = 32*32*3 
+1sconv;- filter size=f=5
+	 stride = 1 = s
+ 	 padding = 0 = p
+ then, o/p = 32 as conv:> h1 = (h0-f+2*p)/s+1
+			     = (32-5+2*0)/1+1
+			     = 28->(conv1(0))
+			     same for width; o/p = 28*28*20(because we have changed no. of channels)
+	*passing the smae function to pooling
+			28/2 => 14*14*20
+2nd conv =>
+ 		h1 = 14
+		h2 = (14-5)/2
+		   = 10*10*30
+		pool = 10/2 = 5 :. 5*5*30  o/p
+		h2 = 5
+
+These(5*5*30) are the no. parameters that we need to convert into fcl.
+ 

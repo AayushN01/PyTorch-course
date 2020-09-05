@@ -1,0 +1,2 @@
+* We need to set model to training mode before starting to train.
+* 

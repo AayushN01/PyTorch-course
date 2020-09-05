@@ -1,0 +1,50 @@
+*Activation Function (ReLU)
+-> Linear function from the real number to the real numbers
+   is a function whose graph is a linr in the plane.
+-> y = mx + c; m=slope; c = y-intercept
+
+** NETWORK CALCULATION
+ Let X = i/p , H = Hidden Layer, Y = o/p, w1,w2 = Weights
+ H = activation(X'w1 + b1)
+ Y = activation(H'w2 + b2)
+ Y = activation(activation(X'w1 + b1)'w2+b2)
+If we remove activation function and bias we get Linear function
+as : Y = (X'w1)'w2
+
+**ReLU Activation Function
+	ReLU(x) = max(0,x)
+--Calculates max of 0 and x. If value is -ve it returns 0 else returns x.
+
+**PRE-TRAINED NETWORK WITH RELU ACTIVATION
+w1 = (1 1) ; w2 = (1) ; b1 = (0) X = ( 0 0	; b2 = (0)
+     (1 1)	  (-2)	     (1)	0 1
+					1 0
+					1 1)
+XOR(X) = (0
+	  1
+	  1
+	  0)
+
+Computing prediction 
+	X*w1+b1 = (0 -1
+		   1 0
+		   1 0
+		   2 1)  
+**ReLU(X*w1+b1) = ReLU {(0 -1  = H = (0 0
+			 1 0	      1 0	
+			 1 0	      1 0
+			 2 1)}        2 1) 
+
+* Using this hidden layer to compute o/p
+Hw2 = (0
+	1
+	1
+	0) = Y
+
+**NETWORK WITHOUT ACTIVATION (On optimizing network without activation,
+we get various o/ps. All o/p will not predict right function.)
+
+**NN withoun activation function is just a linear model.
+**Activation function does non-linear transformation to the i/p making
+it capable to learn and perform more complex tasks.
+ 
